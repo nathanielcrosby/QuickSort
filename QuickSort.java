@@ -26,7 +26,7 @@ public class QuickSort {
         }
     }
 
-    private static int Partition(int[] A,int lo, int hi, int r) {
+    private static int Partition(int[] A, int lo, int hi, int r) {
         Swap(A, r, hi);
         int j = hi-1, i = lo;
         while (i <= j) {
