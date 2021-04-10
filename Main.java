@@ -40,6 +40,7 @@ public class Main {
             for (int i = 2000; i <= 200000; i += 2000) {
                 int[] A = generator.generatePartiallySortedInput(i);
                 int counter = Sort(A, random);
+                sb.append(Integer.toString(i) + "," + Integer.toString(counter) + "\n");
             }
             writer.write(sb.toString());
         } catch (FileNotFoundException e) {
@@ -53,6 +54,7 @@ public class Main {
             for (int i = 100; i <= 10000; i += 100) {
                 int[] A = generator.generateMostlySortedInput(i);
                 int counter = Sort(A, random);
+                sb.append(Integer.toString(i) + "," + Integer.toString(counter) + "\n");
             }
             writer.write(sb.toString());
         } catch (FileNotFoundException e) {
