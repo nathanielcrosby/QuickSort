@@ -23,7 +23,7 @@ public class Main {
             StringBuilder sb = new StringBuilder();
             sb.append("size(n),counter(comps)\n");
 
-            for (int i = 10000; i <= 1000000; i += 10000) {
+            for (int i = 100; i <= 10000; i += 100) {
                 int[] A = generator.generateRandomInput(i);
                 int counter = Sort(A, random);
                 sb.append(Integer.toString(i) + "," + Integer.toString(counter) + "\n");
@@ -37,7 +37,7 @@ public class Main {
             StringBuilder sb = new StringBuilder();
             sb.append("size(n),counter(comps)\n");
 
-            for (int i = 2000; i <= 200000; i += 2000) {
+            for (int i = 100; i <= 10000; i += 100) {
                 int[] A = generator.generatePartiallySortedInput(i);
                 int counter = Sort(A, random);
                 sb.append(Integer.toString(i) + "," + Integer.toString(counter) + "\n");
