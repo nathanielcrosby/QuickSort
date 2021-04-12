@@ -7,22 +7,24 @@ public class QuickSort {
     private static int counter = 0;
 
 
-    public static int Sort(int[] A, boolean random) {
+    public static int Sort(int[] A, int mode) {
         counter = 0;
-        Sort(A, 0, A.length-1, random);
+        Sort(A, 0, A.length-1, mode);
         return counter;
     }
 
-    private static void Sort(int[] A, int lo, int hi, boolean random) {
+    private static void Sort(int[] A, int lo, int hi, int mode) {
         if (hi > lo) {
             int r;
-            if (random)
+            if (mode == 0)
                 r = rn.nextInt(hi - lo + 1) + lo;
+            else if (mode == 1)
+                r = (int) (rn.nextInt((int)(0.5*(hi - lo) + 1)) + lo + (0.25*(hi-lo)));
             else
                 r = hi;
             int p = Partition(A, lo, hi, r);
-            Sort(A, lo, p-1, random);
-            Sort(A,p + 1, hi, random);
+            Sort(A, lo, p-1, mode);
+            Sort(A,p + 1, hi, mode);
         }
     }
 

@@ -11,12 +11,13 @@ import static com.company.QuickSort.Sort;
 public class Main {
 
     public static void main(String[] args) {
-        runInterval(false, "deterministic");
-        runInterval(true, "random");
+        //runInterval(2, "deterministic");
+        //runInterval(0, "random");
+        runInterval(1, "optimized");
 
     }
 
-    public static void runInterval(boolean random, String filename) {
+    public static void runInterval(int mode, String filename) {
         Generate generator = new Generate();
 
         try (PrintWriter writer = new PrintWriter(new File(filename+"_random"+".csv"))) {
@@ -26,7 +27,7 @@ public class Main {
             for (int i = 100; i <= 10000; i += 100) {
                 for(int j = 0; j < 100; j++) {
                     int[] A = generator.generateRandomInput(i);
-                    int counter = Sort(A, random);
+                    int counter = Sort(A, mode);
                     sb.append(Integer.toString(i) + "," + Integer.toString(counter) + "\n");
                 }
             }
@@ -42,7 +43,7 @@ public class Main {
             for (int i = 100; i <= 10000; i += 100) {
                 for(int j = 0; j < 100; j++) {
                     int[] A = generator.generatePartiallySortedInput(i);
-                    int counter = Sort(A, random);
+                    int counter = Sort(A, mode);
                     sb.append(Integer.toString(i) + "," + Integer.toString(counter) + "\n");
                 }
             }
@@ -58,7 +59,7 @@ public class Main {
             for (int i = 100; i <= 10000; i += 100) {
                 for(int j = 0; j < 100; j++) {
                     int[] A = generator.generateMostlySortedInput(i);
-                    int counter = Sort(A, random);
+                    int counter = Sort(A, mode);
                     sb.append(Integer.toString(i) + "," + Integer.toString(counter) + "\n");
                 }
             }
