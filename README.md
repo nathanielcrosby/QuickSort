@@ -1,7 +1,7 @@
 # QuickSort
 COSC-223 QuickSort Analysis
 
-The code is broken up into 2 section: the Java code which runs the variations of Quicksort and stores them into a CSV file and the Python code which plots the data.
+The code is broken up into 2 sections: the Java code which runs the variations of Quicksort and stores them into a CSV file and the Python code which plots the data.
 
 The Java code is broken into 3 parts. The Generator class was provided and is used by the runInterval method to create arrays at size intervals of 100, from 100 to 10,000. 
 The runInterval method then calls the QuickSort.Sort command on each generated array. 
