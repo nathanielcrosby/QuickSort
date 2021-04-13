@@ -11,8 +11,8 @@ import static com.company.QuickSort.Sort;
 public class Main {
 
     public static void main(String[] args) {
-        //runInterval(2, "deterministic");
-        //runInterval(0, "random");
+        runInterval(2, "deterministic");
+        runInterval(0, "random");
         runInterval(1, "optimized");
 
     }
